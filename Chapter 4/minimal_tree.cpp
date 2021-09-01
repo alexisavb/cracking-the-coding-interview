@@ -37,7 +37,7 @@ bool search(Node* node,int value){
 
 void buildTree(vector<int>&arr,int low, int high, Node*& root){
     int middle = low + (high - low) / 2;
-    if(search(root,arr[middle])){
+    if(!search(root,arr[middle])){
         insert(root,arr[middle]);
         buildTree(arr,low,middle,root);
         buildTree(arr,middle,high,root);
